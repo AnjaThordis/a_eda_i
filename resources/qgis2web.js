@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-2644305.670735, 9155476.701171, -1595637.789941, 9920376.690544], map.getSize());
+map.getView().fit([-2749778.257387, 9248269.449550, -1468275.183633, 10013169.438924], map.getSize());
 
 //full zooms only
 map.getView().setProperties({constrainResolution: true});
@@ -147,8 +147,8 @@ var featureOverlay = new ol.layer.Vector({
     updateWhileInteracting: true // optional, for instant visual feedback
 });
 
-var doHighlight = true;
-var doHover = true;
+var doHighlight = false;
+var doHover = false;
 
 function createPopupField(currentFeature, currentFeatureKeys, layer) {
     var popupText = '';
@@ -887,12 +887,6 @@ let measuring = false;
 
 //layerswitcher
 
-var layerSwitcher = new ol.control.LayerSwitcher({
-    tipLabel: "Layers",
-    target: 'top-right-container'
-});
-map.addControl(layerSwitcher);
-    
 
 
 
